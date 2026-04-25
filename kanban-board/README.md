@@ -5,7 +5,7 @@ A modern Kanban board application built using React and Redux Toolkit, supportin
 ---
 
 ## 🚀 Live Demo
-👉 (Add your deployed link here - Vercel/Netlify)
+👉 https://kanban-board-ashy-one.vercel.app/
 
 ---
 
@@ -126,7 +126,7 @@ npm run dev
 
 # 📸 Performance Proof
 
-(![alt text](image.png))
+![alt text](image.png)
 
 # 👨‍💻 Author
 Ujwal Jakhamate
