@@ -3,18 +3,15 @@ import { useDispatch } from "react-redux";
 import { undo, redo } from "./features/boardSlice";
 import Board from "./components/Board";
 import SearchBar from "./components/SearchBar";
+import Filter from "./components/Filter";
 
 function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
     const handleKey = (e) => {
-      if (e.ctrlKey && e.key === "z") {
-        dispatch(undo());
-      }
-      if (e.ctrlKey && e.key === "y") {
-        dispatch(redo());
-      }
+      if (e.ctrlKey && e.key === "z") dispatch(undo());
+      if (e.ctrlKey && e.key === "y") dispatch(redo());
     };
 
     window.addEventListener("keydown", handleKey);

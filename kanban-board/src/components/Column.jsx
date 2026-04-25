@@ -5,12 +5,32 @@ import Card from "./Card";
 const Column = ({ column }) => {
   const dispatch = useDispatch();
 
-  const cards = useSelector((state) => state.board.present.cards);
-  const searchQuery = useSelector((state) => state.board.present.searchQuery);
-  const draggingCardId = useSelector(
-    (state) => state.board.present.draggingCardId
+  const { cards, searchQuery } = useSelector(
+    (state) => state.board.present
   );
 
+  // labels from URL
+  const labels =
+    new URLSearchParams(window.location.search)
+      .get("labels")
+      ?.split(",") || [];
+
+  // filter cards
+  const filteredIds = column.cardIds.filter((id) => {
+    const card = cards[id];
+
+    const matchesSearch = card.title
+      .toLowerCase()
+      .includes(searchQuery.toLowerCase());
+
+    const matchesLabel =
+      labels.length === 0 ||
+      (card.labels || []).some((l) => labels.includes(l));
+
+    return matchesSearch && matchesLabel;
+  });
+
+  // 🔥 Drop with reorder (works correctly now)
   const handleDrop = (e) => {
     e.preventDefault();
 
@@ -45,6 +65,7 @@ const Column = ({ column }) => {
 
   return (
     <div
+      role="list"
       onDragOver={(e) => e.preventDefault()}
       onDrop={handleDrop}
       style={{
@@ -57,15 +78,13 @@ const Column = ({ column }) => {
     >
       <h3>{column.title}</h3>
 
-      {column.cardIds
-        .filter((id) =>
-          cards[id].title
-            .toLowerCase()
-            .includes(searchQuery.toLowerCase())
-        )
-        .map((id) => (
-          <Card key={id} card={cards[id]} columnId={column.id} />
-        ))}
+      {filteredIds.map((id) => (
+        <Card
+          key={id}
+          card={cards[id]}
+          columnId={column.id}
+        />
+      ))}
     </div>
   );
 };
