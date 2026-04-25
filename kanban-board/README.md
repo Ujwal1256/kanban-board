@@ -126,7 +126,7 @@ npm run dev
 
 # 📸 Performance Proof
 
-(Add React DevTools Profiler screenshot here)
+(![alt text](image.png))
 
 # 👨‍💻 Author
 Ujwal Jakhamate
@@ -134,11 +134,7 @@ Ujwal Jakhamate
 
 ---
 
-# 📝 Submission Explanation (IMPORTANT)
 
-Use this in submission form / email:
-
----
 
 ### 📌 Explanation
 
