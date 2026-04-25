@@ -2,7 +2,9 @@ import { useSelector } from "react-redux";
 import Column from "./Column";
 
 const Board = () => {
-  const { columns, columnOrder } = useSelector((state) => state.board);
+  const { columns, columnOrder } = useSelector(
+    (state) => state.board.present
+  );
 
   return (
     <div style={{ display: "flex", gap: "20px", padding: "20px" }}>
