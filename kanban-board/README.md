@@ -102,30 +102,33 @@ npm install
 npm run dev
 
 ```
-🎮 Usage
-Drag cards between columns
-Reorder cards داخل a column
-Use search bar to filter tasks
-Apply label filters via UI
-Use:
-Ctrl + Z → Undo
-Ctrl + Y → Redo
-⚠️ Known Limitations
-Virtualization (react-window) was explored but not included due to compatibility issues with Vite
-Advanced keyboard navigation can be further improved
-Conflict resolution is basic (alert-based)
+# 🎮 Usage
+- Drag cards between columns
+- Reorder cards in a column
+- Use search bar to filter tasks
+-Apply label filters via UI
+- Use:
+- Ctrl + Z → Undo
+- Ctrl + Y → Redo
 
-🚀 Future Improvements
-Smooth drag animations (ghost + snap)
-Advanced accessibility (full keyboard navigation)
-Better conflict resolution UI (toast system)
-Backend integration for real collaboration
-Virtualization for handling 1000+ cards
-📸 Performance Proof
+
+# ⚠️ Known Limitations
+- Virtualization (react-window) was explored but not included due to compatibility issues with Vite
+- Advanced keyboard navigation can be further improved
+  Conflict resolution is basic (alert-based)
+
+# 🚀 Future Improvements
+- Smooth drag animations (ghost + snap)
+- Advanced accessibility (full keyboard navigation)
+- Better conflict resolution UI (toast system)
+- Backend integration for real collaboration
+- Virtualization for handling 1000+ cards
+
+# 📸 Performance Proof
 
 (Add React DevTools Profiler screenshot here)
 
-👨‍💻 Author
+# 👨‍💻 Author
 Ujwal Jakhamate
 
 
