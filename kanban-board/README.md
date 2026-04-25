@@ -70,6 +70,8 @@ A modern Kanban board application built using React and Redux Toolkit, supportin
 ---
 
 ## 📁 Project Structure
+
+```bash
 src/
 ├── app/
 │ └── store.js
@@ -88,13 +90,13 @@ src/
 │ └── localStorage.js
 └── App.jsx
 
-
+```
 ---
 
 ## ⚙️ Setup Instructions
 
 ```bash
-git clone <repo-link>
+git clone "https://github.com/Ujwal1256/kanban-board.git"
 cd kanban-board
 npm install
 npm run dev
@@ -188,11 +190,5 @@ This project demonstrates strong fundamentals in:
 
 ---
 
-# 💡 Final Tip
 
-👉 Add:
-- GitHub repo link  
-- Deployed link (Vercel recommended)
-
----
 
